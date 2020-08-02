@@ -40,19 +40,3 @@ ggplotly(grafico1)
 
 
 
-url <- "https://dechalaca.com/informes/estadisticas/tabla-acumulada-1966-2020"
-valuation_col <- url %>%
-  read_html() %>%
-  html_nodes(xpath='//*[@id="main"]/div/div[4]/iframe')
-
-valuation_data <- url %>%
-  read_html() %>%
-  html_nodes(xpath='//*[@class="data lastcolumn"]')
-
-
-
-URL <- "https://dechalaca.com/informes/estadisticas/tabla-acumulada-1966-2020"
-
-
-library(robotstxt)
-paths_allowed("https://docs.google.com/spreadsheets/u/0/d/1wUo3SxGlQy9UYNUz3p1Q1H2xOofRnAFuNf86aqTeGKU/pub?amp;single=true&amp;gid=0&amp;range=A1:F118&amp;output=html")
