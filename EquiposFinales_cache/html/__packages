@@ -1,0 +1,15 @@
+base
+tint
+sp
+rgdal
+RColorBrewer
+classInt
+sf
+ggplot2
+xml2
+rvest
+RSelenium
+robotstxt
+readxl
+dplyr
+tidyr
