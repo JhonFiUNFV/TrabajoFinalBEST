@@ -41,6 +41,8 @@ library(robotstxt)
 library(readxl)
 library(dplyr)
 library(tidyr)
+library(readxl)
+library(plotly)
 
 url.chalaca<-"https://docs.google.com/spreadsheets/u/0/d/1wUo3SxGlQy9UYNUz3p1Q1H2xOofRnAFuNf86aqTeGKU/pub?amp;single=true&amp;gid=0&amp;range=A1:F118&amp;output=html"
 trs <- read_html(url.chalaca)
@@ -136,4 +138,11 @@ cha %>%
   DT::datatable() # mira la data
 ```
 
+### Grafico 
 
+```{r grafico_8, echo=FALSE,comment=F,warning=FALSE,message=FALSE,fig.height=10}
+grafico_8<-ggplot(cha, aes(x = Departamento, y = Puntos)) + 
+  geom_line(aes(color = `Ciudad`), size = 1) +
+  theme_minimal()
+ggplotly(grafico_8)
+```
